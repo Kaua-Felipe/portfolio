@@ -60,4 +60,11 @@ export const GlobalStyles = createGlobalStyle`
         color: inherit;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #BDB7FF;
+        border-radius: 10px;
+    }
 `
