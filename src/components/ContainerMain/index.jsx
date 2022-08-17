@@ -9,7 +9,7 @@ import { Container, ContainerContent } from "./styles"
 export default function ContainerMain() {
     return (
         <Container>
-            <img src="../../../assets/student.png" alt="klfd" />
+            <img src="../../../assets/student.png" alt="Imagem de Cartoon de estudante" />
             <NavBar />
             <ContainerContent>
                 <About />
