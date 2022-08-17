@@ -32,6 +32,11 @@ export const Container = styled.aside`
         height: 1px;
         margin-top: 5px;
     }
+    @media(max-width: 885px) {
+        position: inherit;
+        width: 100%;
+        border-radius: 0;
+    }
 `
 export const Profile = styled.header`
     display: flex;
