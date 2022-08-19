@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const ContainerNavBar = styled.nav`
-    width: 100%;
+    width: 98.99%;
     height: 50px;
     display: flex;
     align-items: center;
@@ -10,6 +10,7 @@ export const ContainerNavBar = styled.nav`
     top: 0;
     background-color: var(--secondary);
     z-index: 2;
+    margin: 0 auto;
 
     ul {
         width: 50vw;
@@ -36,6 +37,8 @@ export const ContainerNavBar = styled.nav`
         }
     }
     @media(max-width: 885px) {
+        width: 100%;
+        margin: 0;
         position: fixed;
         top: 0;
 
@@ -43,7 +46,7 @@ export const ContainerNavBar = styled.nav`
             width: 100vw;
             height: 100%;
             justify-content: inherit;
-
+            
             li {
                 width: 25%;
                 height: 100%;
@@ -51,7 +54,7 @@ export const ContainerNavBar = styled.nav`
                 justify-content: center;
                 align-items: center;
                 border: none;
-
+                
                 a {
                     text-transform: uppercase;
                     height: 100%;
@@ -86,5 +89,10 @@ export const ContainerNavBar = styled.nav`
             font-size: 50%;
             font-weight: 600;
         }
+    }
+    @media(min-width: 885px) {
+        border-left: 3px solid;
+        border-right: 3px solid;
+        border-image: linear-gradient(to bottom, var(--blue), var(--secondary)) 1 100%;
     }
 `

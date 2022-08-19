@@ -1,14 +1,14 @@
 import React from "react"
 import { Container, Content } from "./styles"
 
-export default function Project({ name, image }) {
+export default function Project({ name, image, description, urlRepo }) {
     return (
         <Container img={image}>
             <div></div>
             <Content>
                 <span>{name}</span>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam suscipit culpa placeat deleniti enim. Quaerat, dicta explicabo incidunt mollitia repudiandae nisi provident eligendi reprehenderit, ipsam minus officiis aspernatur adipisci aperiam.</p>
-                <a href="/">View Design</a>
+                <p>{description}</p>
+                <a href={urlRepo} target="_blank">View Design</a>
             </Content>
             <div></div>
         </Container>

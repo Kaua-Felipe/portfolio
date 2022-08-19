@@ -42,15 +42,21 @@ export default function Projects() {
             <AllProjects>
                 {
                     reposData != null && reposData.map(repo => {
-                        contador += 1
-
-                        return (
-                            <Project 
-                                name={repo.name} 
-                                key={repo.id} 
-                                image={listImgs[contador - 1]} 
-                            />
-                        )
+                        if(repo.id != 404141801 && repo.id != 332112550) {
+                            contador += 1
+    
+                            return (
+                                <Project 
+                                    name={repo.name} 
+                                    key={repo.id} 
+                                    image={listImgs[contador - 1]} 
+                                    description={repo.description} 
+                                    urlRepo={repo.homepage != null ? repo.homepage : repo.html_url}
+                                />
+                            )
+                        } else {
+                            return null
+                        }
                     })
                 }
             </AllProjects>

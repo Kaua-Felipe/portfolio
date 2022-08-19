@@ -4,7 +4,7 @@ import { hoverTop, hoverBottom, animationContentProject } from "./animations"
 export const Container = styled.div`
     width: 20%;
     height: 300px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     margin: 10px;
     padding: 30px;
     border-radius: 5px;
@@ -15,10 +15,11 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 0px 20px -5px rgba(255,255,255,255.56);
-
+    box-shadow: 0px 0px 7px 0px rgba(237, 41, 255, .5);
+    
     &:hover {
         background: #020202;
+        box-shadow: 0px 0px 7px 0px rgba(237, 41, 255, 1);
 
         span, p, a {
             animation: ${animationContentProject} .5s both;
@@ -58,10 +59,18 @@ export const Container = styled.div`
         bottom: 0;
         left: 0;
     }
+    @media(max-width: 647px) {
+        width: 30%;
+    }
+    @media(max-width: 447px) {
+        width: 60%;
+        margin: 10px auto;
+    }
 `
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
+    width: 100%;
     height: 70%;
     align-items: center;
     justify-content: space-between;
@@ -77,6 +86,22 @@ export const Content = styled.div`
         color: #d2d2d2;
         font-size: 17px;
         font-weight: bolder;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 16px;
+        max-height: 100%;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 16px;
+        max-height: 100%;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
     }
     a {
         background: linear-gradient(90deg, rgba(255, 0, 221, .5) 0%, rgba(131, 38, 255, .5) 50%, rgba(44, 38, 255, .5) 100%);
