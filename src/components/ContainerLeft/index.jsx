@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+import axios from "axios"
 import {
     Container, 
     Profile, 
@@ -26,10 +27,26 @@ import {
 } from "./styles"
 
 export default function ContainerLeft() {
+    const [urlImgProfile, setUrlImgProfile] = useState()
+
+    useEffect(() => {
+        async function getImgUrl() {
+            try {
+                const response = await axios.get("https://api.github.com/users/Kaua-Felipe")
+                const dataUser = await response.data
+                const imgUrl = await dataUser.avatar_url
+                setUrlImgProfile(imgUrl)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+        getImgUrl()
+    }, [])
+    
     return (
         <Container>
             <Profile>
-                <img src="http://github.com/Kaua-Felipe.png" alt="" />
+                <img src={urlImgProfile} alt="Imagem de perfil" />
                 <span>Sempre Melhorando</span>
                 <div className="row"></div>
             </Profile>
@@ -37,47 +54,47 @@ export default function ContainerLeft() {
                 <h3>Tecnologias</h3>
                 <ContainerTec>
                     <Technology>
-                        <a href="">
+                        <a href="https://www.w3schools.com/html/" target="_blank">
                             <Html5Icon />
                         </a>
                     </Technology>
                     <Technology>
-                        <a href="">
+                        <a href="https://www.w3schools.com/Css/" target="_blank">
                             <Css3Icon />
                         </a>
                     </Technology>
                     <Technology>
-                        <a href="">
+                        <a href="https://www.javascript.com/" target="_blank">
                             <JavascriptIcon />
                         </a>
                     </Technology>
                     <Technology>
-                        <a href="">
+                        <a href="https://www.typescriptlang.org/" target="_blank">
                             <TypescriptIcon />
                         </a>
                     </Technology>
                     <Technology>
-                        <a href="">
+                        <a href="https://www.mysql.com/" target="_blank">
                             <MysqlIcon />
                         </a>
                     </Technology>
                     <Technology>
-                        <a href="">
+                        <a href="https://www.npmjs.com/" target="_blank">
                             <NpmIcon />
                         </a>
                     </Technology>
                     <Technology>
-                        <a href="">
+                        <a href="https://pt-br.reactjs.org/" target="_blank">
                             <ReactIcon />
                         </a>
                     </Technology>
                     <Technology>
-                        <a href="">
+                        <a href="https://nodejs.org/en/" target="_blank">
                             <NodeIcon />
                         </a>
                     </Technology>
                     <Technology>
-                        <a href="">
+                        <a href="https://styled-components.com/" target="_blank">
                             <StyledComponentsIcon />
                         </a>
                     </Technology>
