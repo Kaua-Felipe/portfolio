@@ -137,16 +137,18 @@ export const Informations = styled.div`
     display: flex;
     justify-content: space-between;
 
-    button {
-        color: inherit;
+    a {
+        color: var(--white);
         border-top: solid gray 1px;
         width: 50%;
         height: 40px;
         font-size: 14px;
-        cursor: pointer;
         transition-duration: .8s;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         &:first-child {
             border-right: solid gray 1px;
             border-bottom-left-radius: 10px;

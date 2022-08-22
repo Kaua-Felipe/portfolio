@@ -25,6 +25,7 @@ import {
     EmailIcon, 
     Informations 
 } from "./styles"
+import curriculo from "./curriculo-kaua-felipe-alves.pdf"
 
 export default function ContainerLeft() {
     const [urlImgProfile, setUrlImgProfile] = useState()
@@ -130,8 +131,8 @@ export default function ContainerLeft() {
                     </Media>
                 </SocialMedia>
                 <Informations>
-                    <button type="button">Download CV</button>
-                    <button type="button">Entrar em contato</button>
+                    <a href={curriculo} target="_blank">Download CV</a>
+                    <a href="https://www.linkedin.com/in/kau%C3%A3-f-a349571b9" target="_blank">Entrar em contato</a>
                 </Informations>
             </ContainerContact>
         </Container>
