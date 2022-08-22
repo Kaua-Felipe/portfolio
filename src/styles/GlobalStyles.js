@@ -24,7 +24,6 @@ export const GlobalStyles = createGlobalStyle`
     }
     h2 {
         font-size: 40px;
-        /* font-size: calc(1.375rem + 1.5vw); */
         font-weight: bolder;
         position: relative;
         padding-bottom: 1rem;

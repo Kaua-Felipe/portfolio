@@ -4,7 +4,6 @@ import { hoverTop, hoverBottom, animationContentProject } from "./animations"
 export const Container = styled.div`
     width: 20%;
     height: 300px;
-    // margin-bottom: 20px;
     margin: 10px;
     padding: 30px;
     border-radius: 5px;
@@ -22,15 +21,21 @@ export const Container = styled.div`
         box-shadow: 0px 0px 7px 0px rgba(237, 41, 255, 1);
 
         span, p, a {
-            animation: ${animationContentProject} .5s both;
-            animation-delay: .4s;
-            animation-timing-function: linear;
+            @media(min-width: 447px) {
+                animation: ${animationContentProject} .5s both;
+                animation-delay: .4s;
+                animation-timing-function: linear;
+            }
         }
         div:first-child {
-            animation: ${hoverTop} .5s both;
+            @media(min-width: 447px) {
+                animation: ${hoverTop} .5s both;
+            }
         }
         div:last-child {
-            animation: ${hoverBottom} .5s both;
+            @media(min-width: 447px) {
+                animation: ${hoverBottom} .5s both;
+            }
         }
     }
     div {
@@ -65,6 +70,7 @@ export const Container = styled.div`
     @media(max-width: 447px) {
         width: 60%;
         margin: 10px auto;
+        background: #020202;
     }
 `
 export const Content = styled.div`
@@ -81,6 +87,10 @@ export const Content = styled.div`
         font-size: 13px;
         text-align: center;
         color: gray;
+
+        @media(max-width: 447px) {
+            opacity: 1;
+        }
     }
     span {
         color: #d2d2d2;

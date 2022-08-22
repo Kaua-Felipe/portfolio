@@ -29,6 +29,6 @@ export const ContainerContent = styled.div`
     padding: 0 20px;
 
     section {
-        margin-top: 50px;
+        padding-top: 50px;
     }
 `
