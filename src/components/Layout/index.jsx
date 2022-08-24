@@ -1,12 +1,11 @@
 import React, { useEffect } from "react"
 import ContainerLeft from "../ContainerLeft"
 import ContainerMain from "../ContainerMain"
-import { 
-    ContainerLayout 
-} from "./styles"
+import { ContainerLayout } from "./styles"
 
 export default function Layout() {
     useEffect(() => {
+		// Animar ao scroll
         const debounce = function(func, wait, immediate) {
             let timeout
             return function(...args) {
@@ -36,7 +35,7 @@ export default function Layout() {
                 }
             })
         }
-            
+        
         animeScroll()
         if(target.length) {
             window.addEventListener("scroll", debounce(() => {

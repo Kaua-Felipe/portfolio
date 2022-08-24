@@ -54,9 +54,9 @@ export default function Projects() {
     var contador = 0
 
     return (
-        <ContainerProjects id="projects" data-animation="bigBottom">
+        <ContainerProjects id="projects">
             <h2>Projetos</h2>
-            <AllProjects>
+            <AllProjects data-animation="bigBottom">
                 {
                     reposData != null && reposData.map(repo => {
                         contador += 1
