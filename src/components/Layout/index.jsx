@@ -42,6 +42,19 @@ export default function Layout() {
                 animeScroll()
             }, 10))
         }
+		
+		// Retirar o endereço dos links internos da URL quando clicado
+		const menuItems = document.querySelectorAll("#navbar a[href^='#']")
+		menuItems.forEach(item => {
+			item.addEventListener("click", event => {
+				event.preventDefault()
+				const element = event.target
+				const id = element.getAttribute("href")
+				const toSection = document.querySelector(id).offsetTop
+				
+				window.scroll(0, toSection)
+			})
+		})
     }, [])
 
     return (
