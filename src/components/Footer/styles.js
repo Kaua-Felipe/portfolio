@@ -5,6 +5,7 @@ export const ContainerFooter = styled.footer`
     padding: 25px 0;
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 
     p, a {
         font-size: 15px;

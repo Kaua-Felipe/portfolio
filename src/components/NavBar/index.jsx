@@ -15,7 +15,7 @@ export default function NavBar() {
                     <a href="#projects">projetos</a>
                 </li>
                 <li>
-                    <a href="#contact">contato</a>
+                    <a href="#skills">Skills</a>
                 </li>
             </ul>
         </ContainerNavBar>

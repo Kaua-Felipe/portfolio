@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const ContainerProjects = styled.section`
-    /* background-color: black; */
+    margin-bottom: 10px;;
 `
 export const AllProjects = styled.div`
     display: flex;
