@@ -12,3 +12,4 @@ export {
 export { Mysql, Typescript, Styledcomponents } from "styled-icons/simple-icons"
 export { EmailOutline } from "styled-icons/evaicons-outline"
 export { Npm } from "styled-icons/fa-brands"
+export { ArrowCircleTop } from "styled-icons/open-iconic"

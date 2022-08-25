@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import ContainerLeft from "../ContainerLeft"
 import ContainerMain from "../ContainerMain"
+import BackToTop from "../BackToTop"
 import { ContainerLayout } from "./styles"
 
 export default function Layout() {
@@ -61,6 +62,7 @@ export default function Layout() {
         <ContainerLayout>
             <ContainerLeft />
             <ContainerMain />
+            <BackToTop />
         </ContainerLayout>
     )
 }
