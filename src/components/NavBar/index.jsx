@@ -15,7 +15,7 @@ export default function NavBar() {
                     <a href="#projects">projetos</a>
                 </li>
                 <li>
-                    <a href="#skills">Skills</a>
+                    <a href="#skills">skills</a>
                 </li>
             </ul>
         </ContainerNavBar>

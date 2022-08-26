@@ -15,6 +15,7 @@ export const ContainerFooter = styled.footer`
         color: var(--white);
         display: flex;
         align-items: baseline;
+        text-align: center;
     }
     span {
         border-bottom: solid 2px #2d2d7d;
