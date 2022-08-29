@@ -3,6 +3,7 @@ import axios from "axios"
 import {
     Container, 
     Profile, 
+    ImgSkeleton, 
     Technologies, 
     ContainerTec, 
     Technology, 
@@ -29,25 +30,31 @@ import curriculo from "./curriculo-kaua-felipe-alves.pdf"
 
 export default function ContainerLeft() {
     const [urlImgProfile, setUrlImgProfile] = useState()
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        async function getImgUrl() {
-            try {
-                const response = await axios.get("https://api.github.com/users/Kaua-Felipe")
-                const dataUser = await response.data
-                const imgUrl = await dataUser.avatar_url
-                setUrlImgProfile(imgUrl)
-            } catch (error) {
-                console.error(error)
+        setTimeout(() => {
+            async function getImgUrl() {
+                try {
+                    const response = await axios.get("https://api.github.com/users/Kaua-Felipe")
+                    const dataUser = await response.data
+                    const imgUrl = await dataUser.avatar_url
+                    setUrlImgProfile(imgUrl)
+                } catch (error) {
+                    console.error(error)
+                }
             }
-        }
-        getImgUrl()
-    }, [])
+            getImgUrl()
+            setIsLoading(false)
+        }, 2000)
+    }, [urlImgProfile])
     
     return (
         <Container>
             <Profile>
-                <img src={urlImgProfile} alt="Imagem de perfil" />
+                {
+                    isLoading ? <ImgSkeleton></ImgSkeleton> : <img src={urlImgProfile} />
+                }
                 <span>Sempre Melhorando</span>
                 <div className="row"></div>
             </Profile>

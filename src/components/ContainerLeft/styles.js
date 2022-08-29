@@ -46,9 +46,6 @@ export const Profile = styled.header`
     border-top-right-radius: 10px;
     padding-top: 30px;
 
-    span {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
     img {
         width: 200px;
         height: 200px;
@@ -70,6 +67,34 @@ export const Profile = styled.header`
             80% { border-color: green }
             90% { border-color: var(--purple) }
             100% { border-color: var(--blue) }
+        }
+    }
+    span {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+`
+export const ImgSkeleton = styled.div`
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: solid 2px var(--blue);
+    background-image: linear-gradient(
+        -90deg, 
+        #121212 0%, 
+        #262626 50%, 
+        #121212 100%
+    );
+    background-size: 400% 400%;
+    animation: shimmer 1.2s ease-in-out infinite;
+    
+    @keyframes shimmer {
+        from {
+            background-position: 0% 0%;
+        }
+        to {
+            background-position: -135% 0%;
         }
     }
 `
