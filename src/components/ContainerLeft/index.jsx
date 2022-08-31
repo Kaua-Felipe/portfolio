@@ -33,28 +33,24 @@ export default function ContainerLeft() {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        setTimeout(() => {
-            async function getImgUrl() {
-                try {
-                    const response = await axios.get("https://api.github.com/users/Kaua-Felipe")
-                    const dataUser = await response.data
-                    const imgUrl = await dataUser.avatar_url
-                    setUrlImgProfile(imgUrl)
-                } catch (error) {
-                    console.error(error)
-                }
+        async function getImgUrl() {
+            try {
+                const response = await axios.get("https://api.github.com/users/Kaua-Felipe")
+                const dataUser = await response.data
+                const imgUrl = await dataUser.avatar_url
+                setUrlImgProfile(imgUrl)
+                setIsLoading(false)
+            } catch (error) {
+                console.error(error)
             }
-            getImgUrl()
-            setIsLoading(false)
-        }, 2000)
+        }
+        getImgUrl()
     }, [urlImgProfile])
     
     return (
         <Container>
             <Profile>
-                {
-                    isLoading ? <ImgSkeleton></ImgSkeleton> : <img src={urlImgProfile} />
-                }
+                {isLoading ? <ImgSkeleton></ImgSkeleton> : <img src={urlImgProfile} />}
                 <span>Sempre Melhorando</span>
                 <div className="row"></div>
             </Profile>
