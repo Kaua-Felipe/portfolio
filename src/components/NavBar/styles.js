@@ -1,6 +1,11 @@
 import styled from "styled-components"
 
+const backgroundColor = props => props.globalTheme == "dark" ? "var(--secondary)" : "#DADADA"
+const color = props => props.globalTheme == "dark" ? "#DADADA" : "#040404"
+const borderColor = props => props.globalTheme == "dark" ? "#040404" : "#DADADA"
+
 export const ContainerNavBar = styled.nav`
+    background-color: ${backgroundColor};
     width: 98.99%;
     height: 50px;
     display: flex;
@@ -8,7 +13,6 @@ export const ContainerNavBar = styled.nav`
     justify-content: center;
     position: sticky;
     top: 0;
-    background-color: var(--secondary);
     z-index: 2;
     margin: 0 auto;
 
@@ -19,7 +23,7 @@ export const ContainerNavBar = styled.nav`
         list-style: none;
 
         li {
-            border-bottom: 2px solid #040404;
+            border-bottom: 2px solid ${borderColor};
             transition-duration: .5s;
             
             @media(min-width: 885px) {
@@ -30,7 +34,7 @@ export const ContainerNavBar = styled.nav`
             }
             a {
                 text-decoration: none;
-                color: white;
+                color: ${color};
                 font-size: 80%;
                 font-family: Arial, Helvetica, sans-serif;
             }
@@ -93,6 +97,6 @@ export const ContainerNavBar = styled.nav`
     @media(min-width: 885px) {
         border-left: 3px solid;
         border-right: 3px solid;
-        border-image: linear-gradient(to bottom, var(--blue), var(--secondary)) 1 100%;
+        border-image: linear-gradient(to bottom, var(--blue), ${backgroundColor}) 1 100%;
     }
 `

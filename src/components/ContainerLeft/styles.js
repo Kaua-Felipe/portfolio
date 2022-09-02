@@ -13,13 +13,18 @@ import {
     Github, 
     Instagram, 
     Facebook, 
-    EmailOutline 
+    EmailOutline, 
+    DarkTheme 
 } from "../../styles/Icons"
 import { borderInfinit, shimmer } from "./animations"
 
+const backgroundColor = props => props.globalTheme == "dark" ? "#040404" : "#DADADA"
+const color = props => props.globalTheme == "dark" ? "#DADADA" : "#040404"
+
 export const Container = styled.aside`
     border-radius: 10px;
-    background-color: #040404;
+    background-color: ${backgroundColor};
+    color: ${color};
     width: calc(30% - 30px);
     height: calc(100vh - 40px);
     position: fixed;
@@ -60,6 +65,22 @@ export const Profile = styled.header`
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 `
+export const ThemeIcon = styled(DarkTheme)`
+    width: 30px;
+    height: 30px;
+    fill: ${props => props.themeIcon == "dark" ? "white" : "#111111"};
+    background-color: ${props => props.themeIcon == "dark" ? "#111111" : "white"};
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition-duration: 1s;
+
+    &:hover {
+        transform: scale(.9);
+    }
+`
+
 export const ImgSkeleton = styled.div`
     width: 200px;
     height: 200px;
@@ -141,7 +162,6 @@ export const Informations = styled.div`
     justify-content: space-between;
 
     a {
-        color: var(--white);
         border-top: solid gray 1px;
         width: 50%;
         height: 40px;

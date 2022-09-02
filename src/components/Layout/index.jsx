@@ -1,8 +1,9 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import ContainerLeft from "../ContainerLeft"
 import ContainerMain from "../ContainerMain"
 import BackToTop from "../BackToTop"
 import { ContainerLayout } from "./styles"
+import UserContext from "../../contexts/UserContext"
 
 export default function Layout() {
     useEffect(() => {
@@ -58,11 +59,15 @@ export default function Layout() {
 		})
     }, [])
 
+    const [theme, setTheme] = useState("dark")
+
     return (
-        <ContainerLayout>
-            <ContainerLeft />
-            <ContainerMain />
-            <BackToTop />
-        </ContainerLayout>
+        <UserContext.Provider value={{ theme, setTheme }}>
+            <ContainerLayout>
+                <ContainerLeft />
+                <ContainerMain />
+                <BackToTop />
+            </ContainerLayout>
+        </UserContext.Provider>
     )
 }

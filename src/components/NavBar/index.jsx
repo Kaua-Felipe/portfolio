@@ -1,9 +1,9 @@
 import React from "react"
 import { ContainerNavBar } from "./styles"
 
-export default function NavBar() {
+export default function NavBar({ globalTheme }) {
     return (
-        <ContainerNavBar id="navbar">
+        <ContainerNavBar id="navbar" globalTheme={globalTheme}>
             <ul>
                 <li>
                     <a href="/">Home</a>

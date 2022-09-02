@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import axios from "axios"
 import {
     Container, 
     Profile, 
+    ThemeIcon, 
     ImgSkeleton, 
     Technologies, 
     ContainerTec, 
@@ -27,10 +28,12 @@ import {
     Informations 
 } from "./styles"
 import curriculo from "./curriculo-kaua-felipe-alves.pdf"
+import UserContext from "../../contexts/UserContext"
 
 export default function ContainerLeft() {
     const [urlImgProfile, setUrlImgProfile] = useState()
     const [isLoading, setIsLoading] = useState(true)
+    const { theme, setTheme } = useContext(UserContext)
 
     useEffect(() => {
         async function getImgUrl() {
@@ -48,9 +51,10 @@ export default function ContainerLeft() {
     }, [urlImgProfile])
     
     return (
-        <Container>
+        <Container globalTheme={theme}>
             <Profile>
                 {isLoading ? <ImgSkeleton></ImgSkeleton> : <img src={urlImgProfile} />}
+                <ThemeIcon title="Trocar de Tema" onClick={() => setTheme(theme == "dark" ? "light" : "dark")} themeIcon={theme} />
                 <span>Sempre Melhorando</span>
                 <div className="row"></div>
             </Profile>
@@ -134,8 +138,8 @@ export default function ContainerLeft() {
                     </Media>
                 </SocialMedia>
                 <Informations>
-                    <a href={curriculo} target="_blank">Download CV</a>
-                    <a href="https://www.linkedin.com/in/kau%C3%A3-f-a349571b9" target="_blank">Entrar em contato</a>
+                    <a href={curriculo} target="_blank" title="Currículo">Download CV</a>
+                    <a href="https://www.linkedin.com/in/kau%C3%A3-f-a349571b9" target="_blank" title="Contato - Linkedin">Entrar em contato</a>
                 </Informations>
             </ContainerContact>
         </Container>
