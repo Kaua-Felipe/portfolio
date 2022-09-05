@@ -66,6 +66,7 @@ export const ContainerNavBar = styled.nav`
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    color: var(--white);
                 }
                 &:first-child {
                     background-color: var(--blue);

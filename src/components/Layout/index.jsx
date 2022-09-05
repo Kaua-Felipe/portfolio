@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import ContainerLeft from "../ContainerLeft"
 import ContainerMain from "../ContainerMain"
-import BackToTop from "../BackToTop"
+import BackToTopAndBottom from "../BackToTopAndBottom"
 import { ContainerLayout } from "./styles"
 import UserContext from "../../contexts/UserContext"
 
@@ -66,7 +66,7 @@ export default function Layout() {
             <ContainerLayout>
                 <ContainerLeft />
                 <ContainerMain />
-                <BackToTop />
+                <BackToTopAndBottom />
             </ContainerLayout>
         </UserContext.Provider>
     )

@@ -19,6 +19,7 @@ export default function ContainerMain() {
                 <About />
                 <Projects />
                 <Skills />
+                <div id="final-main"></div>
             </ContainerContent>
             <Footer />
         </Container>
