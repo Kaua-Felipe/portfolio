@@ -59,7 +59,9 @@ export default function Projects() {
                                 key={repo.key} 
                                 image={listImgs[contador - 1]} 
                                 description={repo.description} 
-                                urlRepo={repo.homepage != null && repo.homepage != "" ? repo.homepage : repo.html_url} 
+                                homepage={repo.homepage} 
+                                htmlUrl={repo.html_url}
+                                hasDesign={repo.homepage != null && repo.homepage != "" ? true : false} 
                             />
                         )
                     })

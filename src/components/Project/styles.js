@@ -113,16 +113,29 @@ export const Content = styled.div`
         -webkit-line-clamp: 7;
         -webkit-box-orient: vertical;
     }
+`
+export const Buttons = styled.footer`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: ${props => props.hasDesign ? "space-between" : "flex-end"};
+    align-items: center;
+    height: 70px;
+
     a {
         background: linear-gradient(90deg, rgba(255, 0, 221, .5) 0%, rgba(131, 38, 255, .5) 50%, rgba(44, 38, 255, .5) 100%);
         color: var(--white);
         width: 60%;
-        padding: 5px 20px;
+        padding: 6px 20px;
         border-radius: 30px;
         transition-duration: .4s;
         
         &:hover {
             transform: scale(1.05);
+        }
+        &:last-child {
+            font-size: 11px;
+            padding: 9px 20px;
         }
     }
 `
