@@ -25,6 +25,10 @@ export default function Skills() {
             event.target.classList.add("active")
         } else if(idSkillClicked == "skill-5") {
             event.target.classList.add("active")
+        } else if(idSkillClicked == "skill-6") {
+            event.target.classList.add("active")
+        } else if(idSkillClicked == "skill-7") {
+            event.target.classList.add("active")
         }
     }
 
@@ -38,6 +42,8 @@ export default function Skills() {
                     <div id="skill-3" className="skills-items" onClick={(e) => verifySkill(e)}>JavaScript</div>
                     <div id="skill-4" className="skills-items" onClick={(e) => verifySkill(e)}>ReactJs</div>
                     <div id="skill-5" className="skills-items" onClick={(e) => verifySkill(e)}>SQL</div>
+                    <div id="skill-6" className="skills-items" onClick={(e) => verifySkill(e)}>Responsividade</div>
+                    <div id="skill-7" className="skills-items" onClick={(e) => verifySkill(e)}>NPM</div>
                 </Header>
                 <main>
                     <AboutSkill skill={skill} />

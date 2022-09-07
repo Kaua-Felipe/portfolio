@@ -8,7 +8,9 @@ export default function AboutSkill({ skill }) {
         skill == "skill-2" || 
         skill == "skill-3" || 
         skill == "skill-4" || 
-        skill == "skill-5"
+        skill == "skill-5" || 
+        skill == "skill-6" ||
+        skill == "skill-7" 
     ) {
         if(skill == "skill-1") {
             nameSkill = "HTML"
@@ -30,6 +32,14 @@ export default function AboutSkill({ skill }) {
             nameSkill = "SQL"
             descriptionSkill = "No SQL, tenho conhecimento com os comandos SELECT, UPDATE, INSERT, DELETE, ORDER BY, JOIN, e mais alguns outros conhecimentos prévios sobre a linguagem de banco de dados."
             width = 40
+        } else if(skill == "skill-6") {
+            nameSkill = "Resposividade"
+            descriptionSkill = "Responsividade é uma das coisas mais importantes hoje em dia para quem deseja criar um website, pois a maioria das pessoas hoje possuem um celular, do que um computador por exemplo, e é muito mais prático o uso dos smartphones. Contudo, meus conhecimentos em responsividade no CSS inclui saber utilizar os comandos do flex-box e media queries para diferentes tamanhos de dispositivos."
+            width = 60
+        } else if(skill == "skill-7") {
+            nameSkill = "NPM"
+            descriptionSkill = "NPM, um dos gerenciadores de pacote mais utilizado nos dias de hoje, e meus conhecimentos nele é de instalar, remover e atualizar dependências, bibliotecas e frameworks a partir da interface de linhas de comando, conhecido também como o prompt de comando do sistema."
+            width = 70
         }
         elementSkillContent = (
             <>
