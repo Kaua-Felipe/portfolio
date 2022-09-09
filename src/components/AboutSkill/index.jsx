@@ -9,8 +9,9 @@ export default function AboutSkill({ skill }) {
         skill == "skill-3" || 
         skill == "skill-4" || 
         skill == "skill-5" || 
-        skill == "skill-6" ||
-        skill == "skill-7" 
+        skill == "skill-6" || 
+        skill == "skill-7" || 
+        skill == "skill-8"
     ) {
         if(skill == "skill-1") {
             nameSkill = "HTML"
@@ -40,6 +41,10 @@ export default function AboutSkill({ skill }) {
             nameSkill = "NPM"
             descriptionSkill = "NPM, um dos gerenciadores de pacote mais utilizado nos dias de hoje, e meus conhecimentos nele é de instalar, remover e atualizar dependências, bibliotecas e frameworks a partir da interface de linhas de comando, conhecido também como o prompt de comando do sistema."
             width = 70
+        } else if(skill == "skill-8") {
+            nameSkill = "GIT"
+            descriptionSkill = "NPM, um dos gerenciadores de pacote mais utilizado nos dias de hoje, e meus conhecimentos nele é de instalar, remover e atualizar dependências, bibliotecas e frameworks a partir da interface de linhas de comando, conhecido também como o prompt de comando do sistema."
+            width = 50
         }
         elementSkillContent = (
             <>
