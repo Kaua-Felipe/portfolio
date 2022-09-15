@@ -8,6 +8,7 @@ import Portfolio from "../../../assets/imgs-projects/portfolio.jpg"
 import AnimalsHope from "../../../assets/imgs-projects/animals-hope.jpg"
 import ProjetoEletiva from "../../../assets/imgs-projects/projeto-eletiva.jpg"
 import GithubAPIInterface from "../../../assets/imgs-projects/github-api-interface.jpg"
+import NlwEsports from "../../../assets/imgs-projects/nlw-esports.jpg"
 
 export default function Projects() {
     const [reposData, setReposData] = useState()
@@ -15,6 +16,7 @@ export default function Projects() {
 		cloneTwitter, 
         GithubAPIInterface, 
         JqueryAjaxAula, 
+        NlwEsports, 
         Portfolio, 
         AnimalsHope, 
         ProjetoEletiva

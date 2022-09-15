@@ -43,7 +43,7 @@ export default function AboutSkill({ skill }) {
             width = 70
         } else if(skill == "skill-8") {
             nameSkill = "GIT"
-            descriptionSkill = "NPM, um dos gerenciadores de pacote mais utilizado nos dias de hoje, e meus conhecimentos nele é de instalar, remover e atualizar dependências, bibliotecas e frameworks a partir da interface de linhas de comando, conhecido também como o prompt de comando do sistema."
+            descriptionSkill = "Git é um sistema de controle de versão, nele sei criar um repositório, criar e mudar nome de branches, e tenho conhecimentos nos seguintes comandos GIT: add, commit, push, pull, init, remote, log, status."
             width = 50
         }
         elementSkillContent = (
