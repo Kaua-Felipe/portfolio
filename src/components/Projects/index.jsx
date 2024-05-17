@@ -3,6 +3,7 @@ import axios from "axios"
 import Project from "../Project"
 import { ContainerProjects, AllProjects } from "./styles"
 import cloneTwitter from "../../../assets/imgs-projects/clone-twitter.jpg"
+import GeminiWebChatbot from "../../../assets/imgs-projects/gemini-web-chatbot.jpg"
 import GithubAPIInterface from "../../../assets/imgs-projects/github-api-interface.jpg"
 import JqueryAjaxAula from "../../../assets/imgs-projects/jquery-ajax-aula.jpg"
 import NlwEsports from "../../../assets/imgs-projects/nlw-esports.jpg"
@@ -14,7 +15,8 @@ import TemplatePadaria from "../../../assets/imgs-projects/template-padaria.jpg"
 export default function Projects() {
     const [reposData, setReposData] = useState()
     const [listImgs] = useState([
-		cloneTwitter, 
+        cloneTwitter, 
+        GeminiWebChatbot, 
         GithubAPIInterface, 
         JqueryAjaxAula, 
         NlwEsports, 
