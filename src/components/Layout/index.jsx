@@ -27,7 +27,7 @@ export default function Layout() {
         const animationClass = "animate"
         
         function animeScroll() {
-            const windowTop = window.pageYOffset + ((window.innerHeight * 9) / 10)
+            const windowTop = window.pageYOffset + ((window.innerHeight * 10) / 10)
             target.forEach((element) => {
                 if(windowTop > element.offsetTop) {
                     element.classList.add(animationClass)

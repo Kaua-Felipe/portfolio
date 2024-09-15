@@ -7,6 +7,7 @@ import Footer from "../Footer"
 import { Container, ContainerContent } from "./styles"
 import studentImg from "../../../assets/student.png"
 import UserContext from "../../contexts/UserContext"
+import ProfessionalExperience from "../ProfessionalExperience"
 
 export default function ContainerMain() {
     const { theme } = useContext(UserContext)
@@ -17,6 +18,7 @@ export default function ContainerMain() {
             <NavBar globalTheme={theme} />
             <ContainerContent>
                 <About />
+                <ProfessionalExperience />
                 <Projects />
                 <Skills />
                 <div id="final-main"></div>

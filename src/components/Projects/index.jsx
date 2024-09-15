@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import axios from "axios"
 import Project from "../Project"
 import { ContainerProjects, AllProjects } from "./styles"
+import CriptoAPS from "../../../assets/imgs-projects/cripto-aps.jpg"
 import cloneTwitter from "../../../assets/imgs-projects/clone-twitter.jpg"
 import GeminiWebChatbot from "../../../assets/imgs-projects/gemini-web-chatbot.jpg"
 import GithubAPIInterface from "../../../assets/imgs-projects/github-api-interface.jpg"
@@ -15,6 +16,7 @@ import TemplatePadaria from "../../../assets/imgs-projects/template-padaria.jpg"
 export default function Projects() {
     const [reposData, setReposData] = useState()
     const [listImgs] = useState([
+        CriptoAPS, 
         cloneTwitter, 
         GeminiWebChatbot, 
         GithubAPIInterface, 
@@ -56,7 +58,7 @@ export default function Projects() {
             <h2>Projetos</h2>
             <AllProjects data-animation="bigBottom">
                 {
-                    reposData != null && reposData.map(repo => {
+                    reposData != null ? reposData.map(repo => {
                         contador += 1
 
                         return (
@@ -70,7 +72,7 @@ export default function Projects() {
                                 hasDesign={repo.homepage != null && repo.homepage != "" ? true : false} 
                             />
                         )
-                    })
+                    }) : "Não foi possível fazer a requisição"
                 }
             </AllProjects>
         </ContainerProjects>
