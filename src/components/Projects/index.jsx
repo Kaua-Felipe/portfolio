@@ -34,7 +34,7 @@ export default function Projects() {
                 const data = await response.data
                 const repos = []
                 for(var i = 0; i < data.length; i++) {
-                    if(data[i].id != 404141801 && data[i].id != 332112550) {
+                    if(data[i].id != 404141801 && data[i].id != 332112550 && data[i].id != 972080096) {
                         repos.push({
                             name: data[i].name, 
                             key: data[i].id, 
