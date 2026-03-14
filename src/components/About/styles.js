@@ -7,7 +7,7 @@ export const ContainerAbout = styled.section`
     p {
         color: gray;
         text-align: justify;
-        line-height: 25px;
+        line-height: 35px;
         letter-spacing: 2px;
     }
 `

@@ -12,12 +12,14 @@ import Portfolio from "../../../assets/imgs-projects/portfolio.jpg"
 import AnimalsHope from "../../../assets/imgs-projects/animals-hope.jpg"
 import ProjetoEletiva from "../../../assets/imgs-projects/projeto-eletiva.jpg"
 import TemplatePadaria from "../../../assets/imgs-projects/template-padaria.jpg"
+import ClubeDaArvore from "../../../assets/imgs-projects/clube-da-arvore.jpg"
 
 export default function Projects() {
     const [reposData, setReposData] = useState()
     const [listImgs] = useState([
         CriptoAPS, 
         cloneTwitter, 
+        ClubeDaArvore,
         GeminiWebChatbot, 
         GithubAPIInterface, 
         JqueryAjaxAula, 

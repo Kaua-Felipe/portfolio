@@ -6,7 +6,9 @@ export default function About() {
         <ContainerAbout id="about">
             <h2>Sobre</h2>
             <p data-animation="bottom">
-                Olá, meu nome é Kauã Felipe Alves, tenho 20 anos e nasci na cidade de Araçatuba-SP. Atualmente, moro com meu irmão e minha mãe, mas busco a minha independência financeira. Para conseguir isso, busco um espaço no mercado de trabalho na área da tecnologia, especificamente na área do desenvolvimento web, área pela qual senti interesse quando fiz o curso de Desenvolvimento de Sistemas e cursanso Ciências da Computação. A minha curiosidade me levou a criar o meu site aos 17 anos, e futuramente construir e colaborar em projetos maiores.
+                Olá! Sou Kauã Felipe Alves, desenvolvedor focado em criar soluções digitais eficientes e apaixonado por tecnologia. Natural de Araçatuba-SP, minha jornada no mundo do código começou cedo: aos 17 anos já estava colocando meu primeiro site no ar.
+
+Atualmente, curso Ciência da Computação e busco consolidar minha carreira no Desenvolvimento Web. Com base sólida em tecnologias como React, TypeScript e Node.js, foco em transformar ideias complexas em interfaces intuitivas. Meu objetivo é conquistar independência através da inovação, colaborando em projetos de grande impacto e evoluindo a cada linha de código.
             </p>
         </ContainerAbout>
     )
