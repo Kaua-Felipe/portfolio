@@ -13,6 +13,7 @@ import AnimalsHope from "../../../assets/imgs-projects/animals-hope.jpg"
 import ProjetoEletiva from "../../../assets/imgs-projects/projeto-eletiva.jpg"
 import TemplatePadaria from "../../../assets/imgs-projects/template-padaria.jpg"
 import ClubeDaArvore from "../../../assets/imgs-projects/clube-da-arvore.jpg"
+import SistemaEducacional from "../../../assets/imgs-projects/sistema-educacional.jpg"
 
 export default function Projects() {
     const [reposData, setReposData] = useState()
@@ -27,6 +28,7 @@ export default function Projects() {
         Portfolio, 
         AnimalsHope, 
         ProjetoEletiva, 
+        SistemaEducacional,
         TemplatePadaria
     ])
     useEffect(() => {
